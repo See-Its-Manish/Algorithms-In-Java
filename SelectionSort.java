@@ -4,10 +4,10 @@ public class SelectionSort {
 
 	public static void main(String[] args) {
 		//Array Declared
-		int a[]= {12, 23, 33, 21, 23, 66};
+		int a[]= {12, 23, 33, 21, 23, 66, 65, 78, 89, 22, 82};
 		
 		//Selection Sort
-		for(int i=0;i<a.length;i++) {			
+		for(int i=0;i<a.length-1;i++) {			
 				int key=a[i];					
 				int pos=i;						
 					
@@ -18,10 +18,9 @@ public class SelectionSort {
 				}
 			}
 			
-			for(int k=pos;k>i;k--) {
-				a[k]=a[k-1];
-			}
+			a[pos]=a[i];
 			a[i]=key;
+			
 		}
 		//Output
 		System.out.println("Sorted Array:");
